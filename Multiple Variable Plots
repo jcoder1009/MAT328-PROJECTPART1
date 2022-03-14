@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import seaborn as sns
+%matplotlib inline
+
+twitch = pd.read_csv("twitchdata-update.csv")
+twitch = twitch.loc[0:25,]
+twitch
+
+sns.relplot(x ="Stream time(minutes)", y = "Watch time(Minutes)", hue = "Channel", data = twitch)
+
+sns.relplot(x ="Followers", y = "Average viewers", hue = "Channel", data = twitch)
