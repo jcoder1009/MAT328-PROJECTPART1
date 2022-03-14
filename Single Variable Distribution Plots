@@ -1,0 +1,45 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import seaborn as sns
+%matplotlib inline
+
+twitch = pd.read_csv("twitchdata-update.csv")
+twitch = twitch.loc[0:25,]
+twitch
+_____________________________________________________________________________________________________________________________________________________________________
+g = sns.catplot(x = "Channel", y = "Peak viewers", \
+            kind = "bar", data = twitch3)
+g.fig.set_size_inches(18,6)
+plt.xticks(rotation=45)
+
+plt.xlabel("Channel")
+plt.ylabel("Peak Viewers")
+plt.title("Peak Viewers for Top Twitch Streamers")
+_______________________________________________________________________________________________________________________________________________________________________
+g = sns.catplot(x = "Channel", y = "Stream time(minutes)", \
+            kind = "bar", data = twitch3)
+g.fig.set_size_inches(18,6)
+plt.xticks(rotation=45)
+
+plt.xlabel("Channel")
+plt.ylabel("Stream Time(minutes)")
+plt.title("Stream Time for Top Twitch Streamers")
+_____________________________________________________________________________________________________________________________________________________________________________
+g = sns.catplot(x = "Channel", y = "Watch time(Minutes)", \
+            kind = "bar", data = twitch3)
+g.fig.set_size_inches(18,6)
+plt.xticks(rotation=45)
+
+plt.xlabel("Year")
+plt.ylabel("Watch Time(Minutes)")
+plt.title("Watch TIme for Top Twitch Streamers")
+___________________________________________________________________________________________________________________________________________________________________________
+g = sns.catplot(x = "Channel", y = "Followers", \
+            kind = "bar", data = twitch3)
+g.fig.set_size_inches(18,6)
+plt.xticks(rotation=45)
+
+plt.xlabel("Channel")
+plt.ylabel("# of Followers")
+plt.title("Total Followers for Top Twitch Streamers")
